@@ -1,4 +1,3 @@
-const { rand, clamp, isNumber, resolveString } = require('../utils/Util');
 const DIE_TYPES = ['base', 'skill', 'gear', 'neg', 'arto', 'stress', 'ammo', 'modifier'];
 const DIE_RANGES = [6, 8, 10, 12];
 //const DIE_RANGES_T2K = ['d', 'c', 'b', 'a'];
@@ -733,4 +732,51 @@ class YZDie {
 	valueOf() {
 		return +`${this.operator}${this.result}`;
 	}
+}
+
+/**
+ * Generates a random integer between [min, max] (included).
+ * @param {number} min Minimum threshold
+ * @param {number} max Maximum threshold
+ * @returns {number} The randomized integer
+ */
+function rand(min, max) {
+	return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+/**
+ * Clamps a value to ensure it sits within a designated range.
+ *
+ * Called with no arguments, this function returns a value to fall
+ * between 0 - 1, offering a useful shorthand for validating multipliers.
+ *
+ * @param {number} input Value to operate upon
+ * @param {number} min Lower threshold; defaults to 0
+ * @param {number} max Upper threshold; defaults to 1
+ * @return {number}
+ */
+function clamp(input, min, max) {
+	return Math.min(Math.max(input, min || 0), undefined === max ? 1 : max);
+}
+
+/**
+ * Checks if is a number.
+ * @param {*} x Value to check
+ * @returns {boolean}
+ */
+function isNumber(x) {
+	if (typeof x === 'number') return true;
+	if (/^0x[0-9a-f]+$/i.test(x)) return true;
+	return (/^[-+]?(?:\d+(?:\.\d*)?|\.\d+)(e[-+]?\d+)?$/.test(x));
+}
+
+/**
+ * Resolves a StringResolvable to a string.
+ * @param {StringResolvable} data The string resolvable to resolve
+ * @returns {string}
+ */
+function resolveString(data) {
+	if (typeof data === 'string') return data;
+	if (data instanceof Array) return data.join(', ');
+	return String(data);
 }
