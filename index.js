@@ -1,9 +1,9 @@
 const DIE_TYPES = ['base', 'skill', 'gear', 'neg', 'arto', 'stress', 'ammo', 'modifier'];
 const DIE_RANGES = [6, 8, 10, 12];
-//const DIE_RANGES_T2K = ['d', 'c', 'b', 'a'];
 const SUCCESSES_TABLE = [0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4];
 const SUCCESSES_TABLE_T2K = [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2];
 const ROLLREGEX = /([*/+-]?)(\d*)[dD]?(\d*)(?:\[(.*)\])?/;
+const YEARZERO_GAMES = ['generic', 'myz', 'fbl', 't2k'];
 
 /**
  * A Year Zero Roll object.

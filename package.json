@@ -1,0 +1,28 @@
+{
+  "name": "yearzero-roll",
+  "version": "1.0.0",
+  "description": "A package for rolling Year Zero Engine dice for Free League Publishing roleplaying games.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stefouch/yearzero-roll.git"
+  },
+  "keywords": [
+    "Dice",
+    "Roll",
+    "RPG",
+    "Roleplaying Game",
+    "Year Zero Engine",
+    "Free League Publishing",
+    "Fria Ligan"
+  ],
+  "author": "Stefouch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Stefouch/yearzero-roll/issues"
+  },
+  "homepage": "https://github.com/Stefouch/yearzero-roll#readme"
+}
