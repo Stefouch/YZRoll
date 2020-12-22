@@ -41,4 +41,5 @@ let banes     = roll.baneCount;
 
 ## See Also
 
-* [API documentation](https://github.com/Stefouch/yearzero-roll/blob/main/DOCUMENTATION.md)
+* [Documentation](https://github.com/Stefouch/yearzero-roll/blob/main/DOCUMENTATION.md)
+* [Changelog](https://github.com/Stefouch/yearzero-roll/blob/main/CHANGELOG.md)
